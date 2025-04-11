@@ -11,6 +11,9 @@ class PersonTests: XCTestCase {
     func testSingularNamePerson() {
         let bono = Person(firstName: "Bono", age: 64)
         XCTAssert(bono.toString() == "[Person: firstName:Bono lastName:nil age:64 job:nil spouse:nil]")
+        
+        let brodsky = Person(lastName: "Brodsky", age: 21)
+        XCTAssert(brodsky.toString() == "[Person: firstName:nil lastName:Brodsky age:21 job:nil spouse:nil]")
     }
 
     func testAgeRestrictions() {
